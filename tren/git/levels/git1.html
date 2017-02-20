@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Настройка Git</title>
+    <link rel="stylesheet" href="git1.css">
+    <script>
+        var count = 0;
+        function textstrt() {
+            ctrl = document.getElementById("txt");
+            if (ctrl.setSelectionRange) {
+
+                ctrl.focus();
+
+                ctrl.setSelectionRange(1, 1);
+            }
+
+
+            document.getElementById("txt").setSelectionRange(0, 0);
+        }
+
+
+        function btnn() {
+            var str = 'git config --global user.name';
+            var str2 = 'git config --global user.email';
+            var str3 = document.getElementById('txt').value;
+            var per1 = per2 = 0;
+
+            if (str3 > str) {
+                document.getElementById('str1').style = "color:#00AA00";
+                per1 = 1;
+                document.getElementById('txt').value = "";
+            }
+
+            if (str3 > str2 && str3!=str) {
+                document.getElementById('str2').style = "color:#00AA00";
+                per2 = 1;
+                document.getElementById('txt').value = "";
+            }
+
+            if (per1 == 1 && per2 == 1) {
+                alert("ffff");
+                document.getElementById('gog').style="visibility:visible";
+                document.getElementById('img').style="visibility:visible";
+                document.getElementById('oop').style="visibility:visible";
+            }
+
+        }
+
+  function go(){
+      document.location.href = 'git2.html';
+
+  }
+    </script>
+</head>
+<body>
+<p>Введите в нашей консоли </p>
+
+<div id="str1"> git config --global user.name "Your Name"</div>
+<div id="str2"> git config --global user.email "your_email@whatever.com"</div>
+
+<textarea class="console" id="txt" rows="15" cols="45" onfocus="textstrt()"></textarea>
+<button onclick="btnn()"> Ввод</button>
+<button id="gog" onclick="go()" style="visibility: hidden"> Далее</button>
+<p style="visibility: hidden" id="oop">Эти комманды нужны, чтобы git узнал ваше имя и электронную почту</p>
+<img id="img" src="pic/t10.png" style="visibility: hidden">
+</body>
+</html>
