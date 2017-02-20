@@ -1,0 +1,19 @@
+ body {
+    margin: auto;
+    text-align: center;
+}
+.mbtn{
+    text-align: center;
+     width: 200px; /* Ширина элемента в пикселах */
+     padding: 10px; /* Поля вокруг текста */
+    margin: auto; /* Выравниваем по центру */
+    background:firebrick;
+    color: white;
+    font-size: 20pt;
+    text-decoration: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
